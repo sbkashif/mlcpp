@@ -1,0 +1,3 @@
+add_executable(test_linear_regression test_linear_regression.cpp)
+target_link_libraries(test_linear_regression PRIVATE mlcpp_core)
+add_test(NAME test_linear_regression COMMAND test_linear_regression)
