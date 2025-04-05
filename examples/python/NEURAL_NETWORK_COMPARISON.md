@@ -21,8 +21,8 @@ The following performance metrics were collected using the moons dataset (1000 s
 
 | Metric | MLCPP Neural Network | scikit-learn MLPClassifier | Ratio (MLCPP/scikit-learn) |
 |--------|---------------------|----------------------------|----------------------------|
-| Training Time | 6.76 seconds | 0.17 seconds | 40.68x slower |
-| Accuracy | 95.67% | 96.33% | 0.99x (99% as accurate) |
+| Training Time | 6.68 seconds | 0.23 seconds | 29.56x slower |
+| Accuracy | 97.67% | 96.33% | 1.01x (101% as accurate) |
 | Memory Usage | Lower | Higher | ~0.6x |
 
 ## XOR Problem Performance
@@ -53,7 +53,7 @@ The decision boundaries from both implementations show similar classification pa
 - Tanh activation function performs very well on certain problems
 
 **Weaknesses:**
-- Significantly slower training than scikit-learn (40x)
+- Significantly slower training than scikit-learn (30x)
 - Limited optimization techniques (only basic mini-batch gradient descent)
 - No built-in regularization techniques
 
@@ -85,6 +85,6 @@ The decision boundaries from both implementations show similar classification pa
 
 ## Conclusion
 
-The MLCPP Neural Network implementation provides a solid foundation with performance comparable to scikit-learn in terms of accuracy. While training time is significantly slower, the implementation offers a clean, readable codebase and lower memory usage.
+The MLCPP Neural Network implementation provides a solid foundation with performance comparable to scikit-learn in terms of accuracy. In our latest tests, it actually achieved slightly higher accuracy (97.67% vs 96.33%) on the moons dataset. While training time is significantly slower (about 30x), the implementation offers a clean, readable codebase and lower memory usage.
 
 Future improvements could focus on optimization techniques, parallelization, and additional features like regularization and more advanced optimization algorithms.
