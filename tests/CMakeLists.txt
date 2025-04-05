@@ -1,3 +1,7 @@
 add_executable(test_linear_regression test_linear_regression.cpp)
 target_link_libraries(test_linear_regression PRIVATE mlcpp_core)
 add_test(NAME test_linear_regression COMMAND test_linear_regression)
+
+add_executable(test_neural_network test_neural_network.cpp)
+target_link_libraries(test_neural_network PRIVATE mlcpp_core)
+add_test(NAME test_neural_network COMMAND test_neural_network)

@@ -16,6 +16,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/mlcpp/include)
 # Library targets
 add_library(mlcpp_core STATIC 
     lib/mlcpp/src/models/linear_regression.cpp
+    lib/mlcpp/src/models/neural_network.cpp
 )
 
 # Find Python from the conda environment
@@ -64,7 +65,6 @@ install(TARGETS mlcpp_core
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
-
 install(DIRECTORY lib/mlcpp/include/
     DESTINATION include
 )
