@@ -14,14 +14,14 @@ This project is a machine learning library built with a C++ backend and Python b
 - **Linear Regression**: Implementation with gradient descent optimization
 - **Neural Network**: Feedforward neural network with customizable architecture and multiple activation functions
 
-## Examples
+## Examples and Performance
 
 Various examples demonstrating how to use ML-CPP are available in the [examples/](examples/) directory:
 
 - **C++ Examples**: See [examples/cpp/](examples/cpp/) for C++ usage examples
 - **Python Examples**: See [examples/python/](examples/python/) for Python usage examples
 
-For detailed instructions on building and running examples, see the [Examples README](examples/README.md).
+For detailed performance comparisons between ML-CPP and scikit-learn, see the [Examples README](examples/README.md).
 
 ## Requirements
 
@@ -69,32 +69,6 @@ If you prefer to set up manually, follow these steps:
    cd ..
    python examples/python/minimal_example.py
    ```
-
-## Neural Network Features
-
-The neural network implementation includes:
-- Customizable network architecture with any number of hidden layers
-- Multiple activation functions (Sigmoid, ReLU, Tanh)
-- Mini-batch stochastic gradient descent
-- Binary and multi-class classification support
-- Comprehensive performance metrics
-
-## Performance
-
-ML-CPP has been benchmarked against scikit-learn implementations:
-
-### Linear Regression
-- Our gradient descent approach is currently slower for training than scikit-learn's direct solver, but our prediction performance is comparable or slightly better.
-
-### Neural Network
-- **Accuracy:** Our implementation achieves comparable accuracy to scikit-learn (95.67% vs 96.33% on the moons dataset), with an accuracy ratio of approximately 0.99x.
-- **Training Speed:** The C++ implementation is currently about 40x slower than scikit-learn's highly optimized implementation when tested on the moons dataset with 1000 samples.
-- **Memory Usage:** Our implementation uses less memory for model storage compared to scikit-learn's MLPClassifier.
-- **Activation Functions:** Tests show TANH activation performs best for XOR problem (100% accuracy), while Sigmoid and ReLU achieved 75%.
-- **C++ Performance:** For small datasets, the C++ implementation trains quickly (XOR problem converges in ~200-300 iterations, taking only 0.006 seconds).
-- **Best Use Cases:** The implementation is well-suited for embedded applications or scenarios where a lightweight, customizable neural network implementation is needed.
-
-For detailed performance metrics and visual comparisons of decision boundaries, see the generated plot files and the [examples/python/neural_network_comparison_example.py](examples/python/neural_network_comparison_example.py) script.
 
 ## License
 
